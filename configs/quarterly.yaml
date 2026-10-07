@@ -1,0 +1,42 @@
+root: runs/live_quarterly
+start: '2010-01-01'
+end: '2026-06-30'
+frequency: quarterly
+target_series: gld_price
+features: [central_banks_yoy, retail_yoy, etf_demand, mine_yoy, recycling_yoy, dollar_return, real_yield_change, stocks_return]
+max_feature_age_days: 220
+model:
+  window: 32
+  min_train: 24
+  alphas: [1, 10, 100]
+  cv_splits: 3
+bootstrap:
+  iterations: 200
+  block_length: 4
+  seed: 20261007
+hac_maxlags: 2
+sources:
+  spdr:
+    enabled: true
+    price_mode: gld_close
+    assumed_delay_days: 2
+  fred:
+    enabled: true
+    vix:
+      enabled: false
+  wgc:
+    enabled: true
+    file: inputs/wgc_quarterly_normalized.xlsx
+    layout: long
+    sheet: data
+    header: 0
+    date_column: date
+    available_column: available_at
+    frequency: quarterly
+    series_columns:
+      cb_purchase: cb_purchase_tonnes
+      bar_coin: bar_coin_tonnes
+      etf_demand: etf_demand_tonnes
+      mine_supply: mine_supply_tonnes
+      recycling: recycling_tonnes
+imports: []

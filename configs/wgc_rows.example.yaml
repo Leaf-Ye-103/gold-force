@@ -1,0 +1,22 @@
+# Copy under sources.wgc after inspect-xlsx. These indices are examples only.
+# Match the downloaded workbook; ZERO-based sheet row/column positions.
+enabled: true
+kind: demand
+file: inputs/GDT_official.xlsx
+layout: rows
+frequency: quarterly
+sheet: Supply and demand
+period_row: 3
+label_column: 0
+period_columns: [2, 3, 4, 5]
+release_calendar: inputs/wgc_releases.csv
+series_rows:
+  cb_purchase:
+    row: 15
+    expected_label: Central banks and other institutions
+    unit: tonnes
+  bar_coin:
+    row: 12
+    expected_label: Total bar and coin demand
+    unit: tonnes
+# Add ETF, mine and recycling rows only after checking exact labels.

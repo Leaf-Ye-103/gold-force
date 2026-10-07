@@ -1,0 +1,194 @@
+{
+  "dollar": {
+    "n": 420,
+    "first": "2017-01-06",
+    "last": "2025-01-17",
+    "unit": [
+      "broad_dollar_index"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 7.0
+  },
+  "gld_holdings": {
+    "n": 420,
+    "first": "2017-01-06",
+    "last": "2025-01-17",
+    "unit": [
+      "tonnes"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 7.0
+  },
+  "gold_price": {
+    "n": 420,
+    "first": "2017-01-06",
+    "last": "2025-01-17",
+    "unit": [
+      "usd_per_troy_oz"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 7.0
+  },
+  "mm_net_pct_oi": {
+    "n": 420,
+    "first": "2017-01-06",
+    "last": "2025-01-17",
+    "unit": [
+      "percent_oi"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 7.0
+  },
+  "nonreportable_net_pct_oi": {
+    "n": 420,
+    "first": "2017-01-06",
+    "last": "2025-01-17",
+    "unit": [
+      "percent_oi"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 7.0
+  },
+  "open_interest": {
+    "n": 420,
+    "first": "2017-01-06",
+    "last": "2025-01-17",
+    "unit": [
+      "contracts"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 7.0
+  },
+  "other_net_pct_oi": {
+    "n": 420,
+    "first": "2017-01-06",
+    "last": "2025-01-17",
+    "unit": [
+      "percent_oi"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 218,
+    "max_gap_days": 7.0
+  },
+  "producer_net_pct_oi": {
+    "n": 420,
+    "first": "2017-01-06",
+    "last": "2025-01-17",
+    "unit": [
+      "percent_oi"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 400,
+    "max_gap_days": 7.0
+  },
+  "real_yield": {
+    "n": 420,
+    "first": "2017-01-06",
+    "last": "2025-01-17",
+    "unit": [
+      "percent"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 7.0
+  },
+  "stocks": {
+    "n": 420,
+    "first": "2017-01-06",
+    "last": "2025-01-17",
+    "unit": [
+      "index"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 7.0
+  },
+  "swap_net_pct_oi": {
+    "n": 420,
+    "first": "2017-01-06",
+    "last": "2025-01-17",
+    "unit": [
+      "percent_oi"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 420,
+    "max_gap_days": 7.0
+  },
+  "vix": {
+    "n": 420,
+    "first": "2017-01-06",
+    "last": "2025-01-17",
+    "unit": [
+      "index"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 7.0
+  }
+}

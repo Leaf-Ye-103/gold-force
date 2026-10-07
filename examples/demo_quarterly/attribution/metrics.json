@@ -1,0 +1,39 @@
+{
+  "frequency": "quarterly",
+  "mode": "attribution",
+  "strict_vintages": true,
+  "target_series": "gold_price",
+  "synthetic_demo": true,
+  "metrics": {
+    "n": 36,
+    "mae_log_return_pp": 1.343944129611677,
+    "rmse_log_return_pp": 1.815931520314466,
+    "r2": 0.10484778833137465,
+    "skill_vs_rolling_mean": 0.14777346115310375,
+    "skill_vs_zero": 0.7330109709110484,
+    "direction_accuracy": 0.9722222222222222,
+    "mean_residual_pp": 0.04448091261474136,
+    "label": "retrospective_out_of_window_explanation"
+  },
+  "diagnostics": {
+    "n": 60,
+    "condition_number": 1.9433033872255858,
+    "breusch_pagan_p": 0.19816784009360905,
+    "ljung_box_p": 0.41155796228623254,
+    "omitted_constant_features": [],
+    "inference": "Descriptive full-sample OLS with HAC; does not validate causality or ridge attributions"
+  },
+  "latest": {
+    "date": "2025-12-31 00:00:00",
+    "actual_return": -2.679115422089365,
+    "predicted_return": -3.5882795554921953,
+    "residual": 0.9091641334028302,
+    "intercept": -3.043869879555021,
+    "n_train": 32,
+    "alpha": 10.0
+  },
+  "meaning": "Statistical contributions relative to historical feature means; not causal effects.",
+  "units": "100*log(price_t/price_t-1); additive log-return percentage points",
+  "forecast_limit": "Current-vintage reconstructed releases are research-only unless strict vintages is enabled.",
+  "bootstrap_limit": "Conditional moving-block coefficient allocation intervals, not causal or forecast intervals."
+}

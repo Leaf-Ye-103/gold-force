@@ -1,0 +1,252 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Synthetic demonstration</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;padding:0 20px;background:#f5f7fa;color:#213044}h1{font-size:30px}table{border-collapse:collapse;width:100%;font-size:14px;background:white}th,td{padding:9px;border-bottom:1px solid #ddd;text-align:right}th:first-child,td:first-child{text-align:left}img{width:100%;background:white;border-radius:12px;margin:20px 0}.note{padding:18px;background:#fff2d8;border-radius:10px;line-height:1.6}code{word-break:break-word}</style>
+<h1>Synthetic demonstration · attribution · quarterly</h1>
+<p>Target: <strong>gold_price</strong>. Gold-price return in log percentage points.</p>
+<p class="note">This report uses generated synthetic data. No current market or investor claim is implied. 
+Contributions describe statistical associations relative to historical means, not independently identified buying pressure or causal effects.
+Forecast inputs use publication cutoffs; strict vintage checks are enabled.
+All additive values are log-return percentage points. GLD holdings are a single-fund demand proxy, not global ETF or retail demand.</p>
+<h2>Latest contributions</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>group</th>
+      <th>contribution_log_return_pp</th>
+      <th>force_score</th>
+      <th>contribution_ci_low_pp</th>
+      <th>contribution_ci_high_pp</th>
+      <th>bootstrap_probability_positive</th>
+      <th>iterations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Retail_Physical</td>
+      <td>-0.5430</td>
+      <td>-46.4190</td>
+      <td>-1.1430</td>
+      <td>-0.0270</td>
+      <td>0.01</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Dollar</td>
+      <td>0.2758</td>
+      <td>23.5733</td>
+      <td>0.0217</td>
+      <td>0.4441</td>
+      <td>0.99</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>ETF_Global</td>
+      <td>-0.1824</td>
+      <td>-15.5943</td>
+      <td>-0.3539</td>
+      <td>0.1653</td>
+      <td>0.22</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Recycling</td>
+      <td>-0.1016</td>
+      <td>-8.6864</td>
+      <td>-0.3317</td>
+      <td>0.0125</td>
+      <td>0.10</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Equities</td>
+      <td>0.0308</td>
+      <td>2.6335</td>
+      <td>-0.0432</td>
+      <td>0.2641</td>
+      <td>0.75</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Mine_Supply</td>
+      <td>-0.0301</td>
+      <td>-2.5704</td>
+      <td>-0.2157</td>
+      <td>0.3592</td>
+      <td>0.32</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Central_Banks</td>
+      <td>0.0045</td>
+      <td>0.3888</td>
+      <td>-0.0472</td>
+      <td>0.0568</td>
+      <td>0.54</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Real_Yield</td>
+      <td>0.0016</td>
+      <td>0.1343</td>
+      <td>-1.6439</td>
+      <td>0.6070</td>
+      <td>0.27</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table><img src="latest.png" alt="Latest model contributions">
+<h2>Return reconciliation</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>component</th>
+      <th>log_return_pp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>intercept</td>
+      <td>-3.0439</td>
+    </tr>
+    <tr>
+      <td>sum of driver contributions</td>
+      <td>-0.5444</td>
+    </tr>
+    <tr>
+      <td>predicted</td>
+      <td>-3.5883</td>
+    </tr>
+    <tr>
+      <td>unexplained residual</td>
+      <td>0.9092</td>
+    </tr>
+    <tr>
+      <td>actual</td>
+      <td>-2.6791</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Evaluation</h2><pre>{
+  &quot;n&quot;: 36,
+  &quot;mae_log_return_pp&quot;: 1.343944129611677,
+  &quot;rmse_log_return_pp&quot;: 1.815931520314466,
+  &quot;r2&quot;: 0.10484778833137465,
+  &quot;skill_vs_rolling_mean&quot;: 0.14777346115310375,
+  &quot;skill_vs_zero&quot;: 0.7330109709110484,
+  &quot;direction_accuracy&quot;: 0.9722222222222222,
+  &quot;mean_residual_pp&quot;: 0.04448091261474136,
+  &quot;label&quot;: &quot;retrospective_out_of_window_explanation&quot;
+}</pre>
+<img src="history.png" alt="Returns and driver contribution history">
+<h2>Descriptive inference</h2><p>OLS-HAC is a separate full-sample diagnostic, not significance testing of rolling Ridge coefficients. Collinear positions can make allocations unstable.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coef_z</th>
+      <th>hac_se</th>
+      <th>z_stat</th>
+      <th>p_value</th>
+      <th>ci_low</th>
+      <th>ci_high</th>
+      <th>q_value_bh</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>const</th>
+      <td>-3.04680</td>
+      <td>0.19842</td>
+      <td>-15.35510</td>
+      <td>0.00000</td>
+      <td>-3.43570</td>
+      <td>-2.65790</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>central_banks_yoy</th>
+      <td>-0.04593</td>
+      <td>0.20895</td>
+      <td>-0.21983</td>
+      <td>0.82601</td>
+      <td>-0.45548</td>
+      <td>0.36361</td>
+      <td>0.94401</td>
+    </tr>
+    <tr>
+      <th>retail_yoy</th>
+      <td>0.47475</td>
+      <td>0.21138</td>
+      <td>2.24595</td>
+      <td>0.02471</td>
+      <td>0.06045</td>
+      <td>0.88906</td>
+      <td>0.06589</td>
+    </tr>
+    <tr>
+      <th>etf_demand</th>
+      <td>0.65331</td>
+      <td>0.18388</td>
+      <td>3.55284</td>
+      <td>0.00038</td>
+      <td>0.29290</td>
+      <td>1.01371</td>
+      <td>0.00305</td>
+    </tr>
+    <tr>
+      <th>mine_yoy</th>
+      <td>-0.13090</td>
+      <td>0.23618</td>
+      <td>-0.55423</td>
+      <td>0.57942</td>
+      <td>-0.59380</td>
+      <td>0.33201</td>
+      <td>0.77257</td>
+    </tr>
+    <tr>
+      <th>recycling_yoy</th>
+      <td>0.32278</td>
+      <td>0.16016</td>
+      <td>2.01532</td>
+      <td>0.04387</td>
+      <td>0.00887</td>
+      <td>0.63669</td>
+      <td>0.08774</td>
+    </tr>
+    <tr>
+      <th>dollar_return</th>
+      <td>-0.58014</td>
+      <td>0.20111</td>
+      <td>-2.88467</td>
+      <td>0.00392</td>
+      <td>-0.97431</td>
+      <td>-0.18597</td>
+      <td>0.01567</td>
+    </tr>
+    <tr>
+      <th>real_yield_change</th>
+      <td>-0.00218</td>
+      <td>0.23243</td>
+      <td>-0.00940</td>
+      <td>0.99250</td>
+      <td>-0.45774</td>
+      <td>0.45337</td>
+      <td>0.99250</td>
+    </tr>
+    <tr>
+      <th>stocks_return</th>
+      <td>0.13675</td>
+      <td>0.14838</td>
+      <td>0.92163</td>
+      <td>0.35672</td>
+      <td>-0.15407</td>
+      <td>0.42758</td>
+      <td>0.57075</td>
+    </tr>
+  </tbody>
+</table><pre>{
+  &quot;n&quot;: 60,
+  &quot;condition_number&quot;: 1.9433033872255858,
+  &quot;breusch_pagan_p&quot;: 0.19816784009360905,
+  &quot;ljung_box_p&quot;: 0.41155796228623254,
+  &quot;omitted_constant_features&quot;: [],
+  &quot;inference&quot;: &quot;Descriptive full-sample OLS with HAC; does not validate causality or ridge attributions&quot;
+}</pre>
+<p>CSV files include the full contributions, scaler parameters, raw-unit coefficients and availability audit.</p></html>

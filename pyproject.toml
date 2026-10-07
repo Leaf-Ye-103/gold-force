@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gold-force"
+version = "1.0.0"
+description = "Gold driver attribution with release-aware research forecasts"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24,<3", "pandas>=2.2,<3", "scikit-learn>=1.4,<2", "statsmodels>=0.14,<0.16", "requests>=2.31,<3", "beautifulsoup4>=4.12,<5", "PyYAML>=6,<7", "openpyxl>=3.1,<4", "matplotlib>=3.8,<4", "tzdata>=2024.1"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+gold-force = "gold_force.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["gold_force*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,162 @@
+{
+  "bar_coin": {
+    "n": 64,
+    "first": "2010-03-31",
+    "last": "2025-12-31",
+    "unit": [
+      "tonnes"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 92.0
+  },
+  "cb_purchase": {
+    "n": 64,
+    "first": "2010-03-31",
+    "last": "2025-12-31",
+    "unit": [
+      "tonnes"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 92.0
+  },
+  "dollar": {
+    "n": 64,
+    "first": "2010-03-31",
+    "last": "2025-12-31",
+    "unit": [
+      "broad_dollar_index"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 92.0
+  },
+  "etf_demand": {
+    "n": 64,
+    "first": "2010-03-31",
+    "last": "2025-12-31",
+    "unit": [
+      "tonnes"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 33,
+    "max_gap_days": 92.0
+  },
+  "gold_price": {
+    "n": 64,
+    "first": "2010-03-31",
+    "last": "2025-12-31",
+    "unit": [
+      "usd_per_troy_oz"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 92.0
+  },
+  "mine_supply": {
+    "n": 64,
+    "first": "2010-03-31",
+    "last": "2025-12-31",
+    "unit": [
+      "tonnes"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 92.0
+  },
+  "real_yield": {
+    "n": 64,
+    "first": "2010-03-31",
+    "last": "2025-12-31",
+    "unit": [
+      "percent"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 92.0
+  },
+  "recycling": {
+    "n": 64,
+    "first": "2010-03-31",
+    "last": "2025-12-31",
+    "unit": [
+      "tonnes"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 92.0
+  },
+  "stocks": {
+    "n": 64,
+    "first": "2010-03-31",
+    "last": "2025-12-31",
+    "unit": [
+      "index"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 92.0
+  },
+  "vix": {
+    "n": 64,
+    "first": "2010-03-31",
+    "last": "2025-12-31",
+    "unit": [
+      "index"
+    ],
+    "source": [
+      "SYNTHETIC DEMO"
+    ],
+    "availability_basis": [
+      "synthetic_first_release"
+    ],
+    "negative_values": 0,
+    "max_gap_days": 92.0
+  }
+}

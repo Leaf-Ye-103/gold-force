@@ -1,0 +1,34 @@
+root: runs/reproduce_demo_weekly
+start: '2017-01-06'
+end: '2025-01-17'
+frequency: weekly
+synthetic_demo: true
+features:
+- gld_tonnes_change
+- mm_change
+- swap_change
+- producer_change
+- nonreportable_change
+- oi_return
+- dollar_return
+- real_yield_change
+- vix_return
+- stocks_return
+max_feature_age_days: 28
+model:
+  window: 104
+  min_train: 60
+  alphas:
+  - 0.1
+  - 1
+  - 10
+  - 100
+  cv_splits: 3
+bootstrap:
+  iterations: 100
+  block_length: 4
+  seed: 20261007
+hac_maxlags: 4
+sources: {}
+imports:
+- file: examples/demo_weekly/synthetic_observations.csv

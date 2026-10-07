@@ -1,0 +1,32 @@
+root: runs/reproduce_demo_quarterly
+start: '2010-03-31'
+end: '2025-12-31'
+frequency: quarterly
+synthetic_demo: true
+features:
+- central_banks_yoy
+- retail_yoy
+- etf_demand
+- mine_yoy
+- recycling_yoy
+- dollar_return
+- real_yield_change
+- stocks_return
+max_feature_age_days: 220
+model:
+  window: 32
+  min_train: 24
+  alphas:
+  - 0.1
+  - 1
+  - 10
+  - 100
+  cv_splits: 3
+bootstrap:
+  iterations: 100
+  block_length: 4
+  seed: 20261007
+hac_maxlags: 4
+sources: {}
+imports:
+- file: examples/demo_quarterly/synthetic_observations.csv

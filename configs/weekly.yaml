@@ -1,0 +1,63 @@
+root: runs/live_weekly
+start: '2016-01-01'
+end: '2026-10-06'
+frequency: weekly
+target_series: gld_price  # GLD return proxy; NOT USD/oz gold spot
+features:
+  - gld_tonnes_change
+  - mm_change
+  - swap_change
+  - producer_change
+  - nonreportable_change
+  - oi_return
+  - dollar_return
+  - real_yield_change
+  - vix_return
+  - stocks_return
+max_feature_age_days: 28
+model:
+  window: 156
+  min_train: 78
+  alphas: [0.1, 1, 10, 100]
+  cv_splits: 3
+bootstrap:
+  iterations: 200
+  block_length: 4
+  seed: 20261007
+hac_maxlags: 4
+http:
+  timeout: 30
+  retries: 2
+  cache_hours: 24
+sources:
+  cftc:
+    enabled: true
+    method: api
+    assumed_delay_days: 10
+    # release_calendar: inputs/cftc_releases.csv
+  spdr:
+    enabled: true
+    price_mode: gld_close
+    assumed_delay_days: 2
+    # file: inputs/GLD_archive.xlsx
+    # columns:
+    #   date: Date
+    #   gold_price: LBMA Gold Price (US$)
+    #   gld_holdings: Total Net Asset Value in the Trust Tonnes
+  fred:
+    enabled: true
+    dollar:
+      id: DTWEXBGS
+      assumed_delay_days: 10
+    real_yield:
+      id: DFII10
+      assumed_delay_days: 2
+    vix:
+      id: VIXCLS
+      assumed_delay_days: 2
+    stocks:
+      id: SP500
+      assumed_delay_days: 2
+  wgc:
+    enabled: false
+imports: []

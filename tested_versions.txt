@@ -1,0 +1,12 @@
+# Tested on Python 3.12; optional reproducibility reference, not a required lock.
+numpy==2.3.5
+pandas==2.2.3
+scikit-learn==1.8.0
+statsmodels==0.15.0
+requests==2.34.2
+beautifulsoup4==4.15.0
+PyYAML==6.0.3
+openpyxl==3.1.5
+matplotlib==3.10.8
+pytest==9.1.1
+scipy==1.17.0

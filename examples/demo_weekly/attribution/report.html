@@ -1,0 +1,290 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Synthetic demonstration</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;padding:0 20px;background:#f5f7fa;color:#213044}h1{font-size:30px}table{border-collapse:collapse;width:100%;font-size:14px;background:white}th,td{padding:9px;border-bottom:1px solid #ddd;text-align:right}th:first-child,td:first-child{text-align:left}img{width:100%;background:white;border-radius:12px;margin:20px 0}.note{padding:18px;background:#fff2d8;border-radius:10px;line-height:1.6}code{word-break:break-word}</style>
+<h1>Synthetic demonstration · attribution · weekly</h1>
+<p>Target: <strong>gold_price</strong>. Gold-price return in log percentage points.</p>
+<p class="note">This report uses generated synthetic data. No current market or investor claim is implied. 
+Contributions describe statistical associations relative to historical means, not independently identified buying pressure or causal effects.
+Forecast inputs use publication cutoffs; strict vintage checks are enabled.
+All additive values are log-return percentage points. GLD holdings are a single-fund demand proxy, not global ETF or retail demand.</p>
+<h2>Latest contributions</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>group</th>
+      <th>contribution_log_return_pp</th>
+      <th>force_score</th>
+      <th>contribution_ci_low_pp</th>
+      <th>contribution_ci_high_pp</th>
+      <th>bootstrap_probability_positive</th>
+      <th>iterations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Real_Yield</td>
+      <td>-0.1635</td>
+      <td>-29.7985</td>
+      <td>-0.3264</td>
+      <td>-0.0262</td>
+      <td>0.00</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Risk_Sentiment</td>
+      <td>0.1127</td>
+      <td>20.5416</td>
+      <td>0.0214</td>
+      <td>0.2099</td>
+      <td>1.00</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>ETF_GLD_proxy</td>
+      <td>0.1100</td>
+      <td>20.0549</td>
+      <td>0.0440</td>
+      <td>0.1741</td>
+      <td>1.00</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Dollar</td>
+      <td>0.0521</td>
+      <td>9.4908</td>
+      <td>-0.0155</td>
+      <td>0.1201</td>
+      <td>0.93</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Managed_Money</td>
+      <td>0.0414</td>
+      <td>7.5481</td>
+      <td>0.0061</td>
+      <td>0.0897</td>
+      <td>0.99</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Producers</td>
+      <td>-0.0386</td>
+      <td>-7.0319</td>
+      <td>-0.2579</td>
+      <td>0.1001</td>
+      <td>0.28</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Equities</td>
+      <td>0.0153</td>
+      <td>2.7884</td>
+      <td>-0.0078</td>
+      <td>0.0493</td>
+      <td>0.85</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Market_Activity</td>
+      <td>0.0068</td>
+      <td>1.2303</td>
+      <td>-0.0135</td>
+      <td>0.0202</td>
+      <td>0.62</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Nonreportable_proxy</td>
+      <td>0.0063</td>
+      <td>1.1429</td>
+      <td>-0.0210</td>
+      <td>0.0297</td>
+      <td>0.60</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Swap_Dealers</td>
+      <td>-0.0020</td>
+      <td>-0.3726</td>
+      <td>-0.0908</td>
+      <td>0.1107</td>
+      <td>0.56</td>
+      <td>100</td>
+    </tr>
+  </tbody>
+</table><img src="latest.png" alt="Latest model contributions">
+<h2>Return reconciliation</h2><table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>component</th>
+      <th>log_return_pp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>intercept</td>
+      <td>0.0544</td>
+    </tr>
+    <tr>
+      <td>sum of driver contributions</td>
+      <td>0.1404</td>
+    </tr>
+    <tr>
+      <td>predicted</td>
+      <td>0.1948</td>
+    </tr>
+    <tr>
+      <td>unexplained residual</td>
+      <td>0.0818</td>
+    </tr>
+    <tr>
+      <td>actual</td>
+      <td>0.2766</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Evaluation</h2><pre>{
+  &quot;n&quot;: 359,
+  &quot;mae_log_return_pp&quot;: 0.5523897816339263,
+  &quot;rmse_log_return_pp&quot;: 0.681530128695743,
+  &quot;r2&quot;: 0.3718817750917527,
+  &quot;skill_vs_rolling_mean&quot;: 0.3860051635176468,
+  &quot;skill_vs_zero&quot;: 0.3774787601800236,
+  &quot;direction_accuracy&quot;: 0.6991643454038997,
+  &quot;mean_residual_pp&quot;: 0.003422273754745694,
+  &quot;label&quot;: &quot;retrospective_out_of_window_explanation&quot;
+}</pre>
+<img src="history.png" alt="Returns and driver contribution history">
+<h2>Descriptive inference</h2><p>OLS-HAC is a separate full-sample diagnostic, not significance testing of rolling Ridge coefficients. Collinear positions can make allocations unstable.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coef_z</th>
+      <th>hac_se</th>
+      <th>z_stat</th>
+      <th>p_value</th>
+      <th>ci_low</th>
+      <th>ci_high</th>
+      <th>q_value_bh</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>const</th>
+      <td>0.05811</td>
+      <td>0.03007</td>
+      <td>1.93245</td>
+      <td>0.05330</td>
+      <td>-0.00083</td>
+      <td>0.11705</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>gld_tonnes_change</th>
+      <td>0.26621</td>
+      <td>0.03214</td>
+      <td>8.28240</td>
+      <td>0.00000</td>
+      <td>0.20321</td>
+      <td>0.32920</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>mm_change</th>
+      <td>0.14866</td>
+      <td>0.02974</td>
+      <td>4.99835</td>
+      <td>0.00000</td>
+      <td>0.09036</td>
+      <td>0.20695</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>swap_change</th>
+      <td>-0.04014</td>
+      <td>0.03126</td>
+      <td>-1.28422</td>
+      <td>0.19907</td>
+      <td>-0.10141</td>
+      <td>0.02112</td>
+      <td>0.28438</td>
+    </tr>
+    <tr>
+      <th>producer_change</th>
+      <td>0.02034</td>
+      <td>0.02968</td>
+      <td>0.68532</td>
+      <td>0.49315</td>
+      <td>-0.03783</td>
+      <td>0.07852</td>
+      <td>0.49315</td>
+    </tr>
+    <tr>
+      <th>nonreportable_change</th>
+      <td>0.03485</td>
+      <td>0.03104</td>
+      <td>1.12277</td>
+      <td>0.26153</td>
+      <td>-0.02599</td>
+      <td>0.09568</td>
+      <td>0.32692</td>
+    </tr>
+    <tr>
+      <th>oi_return</th>
+      <td>-0.03121</td>
+      <td>0.03076</td>
+      <td>-1.01461</td>
+      <td>0.31029</td>
+      <td>-0.09149</td>
+      <td>0.02908</td>
+      <td>0.34477</td>
+    </tr>
+    <tr>
+      <th>dollar_return</th>
+      <td>-0.40885</td>
+      <td>0.03239</td>
+      <td>-12.62219</td>
+      <td>0.00000</td>
+      <td>-0.47234</td>
+      <td>-0.34537</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>real_yield_change</th>
+      <td>-0.09568</td>
+      <td>0.02678</td>
+      <td>-3.57347</td>
+      <td>0.00035</td>
+      <td>-0.14816</td>
+      <td>-0.04320</td>
+      <td>0.00059</td>
+    </tr>
+    <tr>
+      <th>vix_return</th>
+      <td>0.17902</td>
+      <td>0.02799</td>
+      <td>6.39685</td>
+      <td>0.00000</td>
+      <td>0.12417</td>
+      <td>0.23387</td>
+      <td>0.00000</td>
+    </tr>
+    <tr>
+      <th>stocks_return</th>
+      <td>0.17586</td>
+      <td>0.03129</td>
+      <td>5.61982</td>
+      <td>0.00000</td>
+      <td>0.11453</td>
+      <td>0.23719</td>
+      <td>0.00000</td>
+    </tr>
+  </tbody>
+</table><pre>{
+  &quot;n&quot;: 419,
+  &quot;condition_number&quot;: 1.215174383772801,
+  &quot;breusch_pagan_p&quot;: 0.11053081613838658,
+  &quot;ljung_box_p&quot;: 0.5281364191659805,
+  &quot;omitted_constant_features&quot;: [],
+  &quot;inference&quot;: &quot;Descriptive full-sample OLS with HAC; does not validate causality or ridge attributions&quot;
+}</pre>
+<p>CSV files include the full contributions, scaler parameters, raw-unit coefficients and availability audit.</p></html>
